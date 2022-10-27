@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Compilation &mdash; Ivy 1.0 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="icon" type="image/png" href="https://github.com/unifyai/unifyai.github.io/blob/master/img/externally_linked/ivy_logo_only.png?raw=true">
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -43,8 +44,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../background.html">Background</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../design.html">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../related_work.html">Related Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../extensions.html">Extensions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../roadmap.html">Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../deep_dive.html">Deep Dive</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
@@ -52,6 +53,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Functions</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../extensions.html">Extensions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="activations.html">Activations</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Compilation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="compilation/compile.html">compile</a></li>
@@ -62,7 +64,6 @@
 <li class="toctree-l1"><a class="reference internal" href="data_type.html">Data type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="device.html">Device</a></li>
 <li class="toctree-l1"><a class="reference internal" href="elementwise.html">Elementwise</a></li>
-<li class="toctree-l1"><a class="reference internal" href="extensions.html">Extensions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="general.html">General</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gradients.html">Gradients</a></li>
 <li class="toctree-l1"><a class="reference internal" href="layers.html">Layers</a></li>
@@ -97,15 +98,15 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Docs</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../docs/ivy.html">Ivy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../docs/ivy_mech.html">Ivy mech</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../docs/ivy_vision.html">Ivy vision</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../docs/ivy_robot.html">Ivy robot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../docs/ivy_gym.html">Ivy gym</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../docs/ivy_memory.html">Ivy memory</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../docs/ivy_builder.html">Ivy builder</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../docs/ivy_models.html">Ivy models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../docs/ivy_ecosystem.html">Ivy ecosystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ivy"">Ivy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mech"">Ivy mech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../vision"">Ivy vision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../robot"">Ivy robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../gym"">Ivy gym</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../memory"">Ivy memory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../builder"">Ivy builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../models"">Ivy models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ecosystem"">Ivy ecosystem</a></li>
 </ul>
 
         </div>
@@ -122,8 +123,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../ivy.html">&lt;no title&gt;</a> &raquo;</li>
-      <li>Compilation</li>
+                <li>Compilation</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/functional/ivy/compilation.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -138,7 +138,7 @@
 <p>Collection of general Ivy compilation functions.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="ivy.functional.ivy.compilation.compile">
-<span class="sig-prename descclassname"><span class="pre">ivy.functional.ivy.compilation.</span></span><span class="sig-name descname"><span class="pre">compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynamic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">example_inputs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">static_argnums</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">static_argnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/functional/ivy/compilation.html#compile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.functional.ivy.compilation.compile" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname">ivy.</span></span><span class="sig-name descname"><span class="pre">compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynamic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">example_inputs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">static_argnums</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">static_argnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/functional/ivy/compilation.html#compile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.functional.ivy.compilation.compile" title="Permalink to this definition"></a></dt>
 <dd><p>Provide a function which should be compiled, for faster inference. The handle to
 the newly compiled function is returned.</p>
 <dl class="field-list simple">
@@ -166,7 +166,7 @@ None.</p></li>
 
 <div class="toctree-wrapper compound">
 </div>
-<p>This should have hopefully given you an overview of the compilation submodule,If you have any questions, please feel free to reach out on our <a class="reference external" href="https://discord.gg/ZVQdvbzNQJ">discord</a> in the <a class="reference external" href="https://discord.com/channels/799879767196958751/1000043526849056808">compilation channel</a> or in the <a class="reference external" href="https://discord.com/channels/799879767196958751/2184">compilation forum</a>!</p>
+<p>This should have hopefully given you an overview of the compilation submodule,If you have any questions, please feel free to reach out on our <a class="reference external" href="https://discord.gg/ZVQdvbzNQJ">discord</a> in the <a class="reference external" href="https://discord.com/channels/799879767196958751/1000043526849056808">compilation channel</a> or in the <a class="reference external" href="https://discord.com/channels/799879767196958751/1028298745726648371">compilation forum</a>!</p>
 </section>
 
 

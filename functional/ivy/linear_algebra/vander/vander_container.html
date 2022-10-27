@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ivy.Container.vander &mdash; Ivy 1.0 documentation</title>
       <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="icon" type="image/png" href="https://github.com/unifyai/unifyai.github.io/blob/master/img/externally_linked/ivy_logo_only.png?raw=true">
       <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -20,7 +21,7 @@
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="Losses" href="../../losses.html" />
+    <link rel="next" title="vector_to_skew_symmetric_matrix" href="../vector_to_skew_symmetric_matrix.html" />
     <link rel="prev" title="ivy.Array.vander" href="vander_array.html" /> 
 </head>
 
@@ -43,8 +44,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../background.html">Background</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../design.html">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../related_work.html">Related Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../extensions.html">Extensions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../roadmap.html">Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../contributing.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../deep_dive.html">Deep Dive</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../faq.html">FAQ</a></li>
@@ -52,6 +53,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Functions</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../extensions.html">Extensions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../compilation.html">Compilation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../constants.html">Constants</a></li>
@@ -59,7 +61,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../data_type.html">Data type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../device.html">Device</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../elementwise.html">Elementwise</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../extensions.html">Extensions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general.html">General</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../gradients.html">Gradients</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../layers.html">Layers</a></li>
@@ -67,7 +68,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../cholesky.html">cholesky</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cross.html">cross</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../det.html">det</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../diag.html">diag</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../diagonal.html">diagonal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../eigh.html">eigh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../eigvalsh.html">eigvalsh</a></li>
@@ -89,7 +89,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../trace.html">trace</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../vecdot.html">vecdot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../vector_norm.html">vector_norm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../vector_to_skew_symmetric_matrix.html">vector_to_skew_symmetric_matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../diag.html">diag</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../vander.html">vander</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="vander_functional.html">ivy.vander</a></li>
 <li class="toctree-l3"><a class="reference internal" href="static_vander_container.html">ivy.Container.static_vander</a></li>
@@ -97,6 +97,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">ivy.Container.vander</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../vector_to_skew_symmetric_matrix.html">vector_to_skew_symmetric_matrix</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../losses.html">Losses</a></li>
@@ -129,15 +130,15 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Docs</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../docs/ivy.html">Ivy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../docs/ivy_mech.html">Ivy mech</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../docs/ivy_vision.html">Ivy vision</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../docs/ivy_robot.html">Ivy robot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../docs/ivy_gym.html">Ivy gym</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../docs/ivy_memory.html">Ivy memory</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../docs/ivy_builder.html">Ivy builder</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../docs/ivy_models.html">Ivy models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../docs/ivy_ecosystem.html">Ivy ecosystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ivy"">Ivy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../mech"">Ivy mech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../vision"">Ivy vision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../robot"">Ivy robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../gym"">Ivy gym</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../memory"">Ivy memory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../builder"">Ivy builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../models"">Ivy models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ecosystem"">Ivy ecosystem</a></li>
 </ul>
 
         </div>
@@ -154,8 +155,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../../ivy.html">&lt;no title&gt;</a> &raquo;</li>
-          <li><a href="../../linear_algebra.html">Linear algebra</a> &raquo;</li>
+                    <li><a href="../../linear_algebra.html">Linear algebra</a> &raquo;</li>
           <li><a href="../vander.html">vander</a> &raquo;</li>
       <li>ivy.Container.vander</li>
       <li class="wy-breadcrumbs-aside">
@@ -171,8 +171,8 @@
 <h1>ivy.Container.vander<a class="headerlink" href="#ivy-container-vander" title="Permalink to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="ivy.container.container_methods.vander">
-<span class="sig-prename descclassname"><span class="pre">ivy.container.container_methods.</span></span><span class="sig-name descname"><span class="pre">vander</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">increasing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/ivy/container/container_methods.html#vander"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.container.container_methods.vander" title="Permalink to this definition"></a></dt>
-<dd><p>ivy.Container instance method variant of ivy.vander.
+<span class="sig-prename descclassname">ivy.Container.</span></span><span class="sig-name descname"><span class="pre">vander</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">increasing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../../_modules/ivy/container/linear_algebra.html#ContainerWithLinear_algebra.vander"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.container.container_methods.vander" title="Permalink to this definition"></a></dt>
+<dd><p>ivy.Container instance method variant of <a href="../vander/vander_functional.html">ivy.vander</a>.
 This method Returns the Vandermonde matrix of the input array.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -222,7 +222,7 @@ included in the input container.</p>
 <div class="line"><br /></div>
 <div class="line"><strong>Supported Frameworks:</strong></div>
 </div>
-<p><a class="reference external" href="https://jax.readthedocs.io"><img alt="jax_logo" src="../../../../_images/jax_logo.png" /></a> <a class="reference external" href="https://www.tensorflow.org"><img alt="tf_logo" src="../../../../_images/tensorflow_logo.png" /></a> <a class="reference external" href="https://pytorch.org"><img alt="pytorch_logo" src="../../../../_images/pytorch_logo.png" /></a> <a class="reference external" href="https://mxnet.apache.org"><img alt="mxnet_logo" src="../../../../_images/mxnet_logo.png" /></a> <a class="reference external" href="https://numpy.org"><img alt="numpy_logo" src="../../../../_images/numpy_logo.png" /></a></p>
+<p class=supported_frameworks><a class="reference external logo" href="https://jax.readthedocs.io"><img alt="jax_logo" src="../../../../_images/jax_logo.png" /></a> <a class="reference external logo" href="https://www.tensorflow.org"><img alt="tf_logo" src="../../../../_images/tensorflow_logo.png" /></a> <a class="reference external logo" href="https://pytorch.org"><img alt="pytorch_logo" src="../../../../_images/pytorch_logo.png" /></a> <a class="reference external logo" href="https://mxnet.apache.org"><img alt="mxnet_logo" src="../../../../_images/mxnet_logo.png" /></a> <a class="reference external logo" href="https://numpy.org"><img alt="numpy_logo" src="../../../../_images/numpy_logo.png" /></a></p>
 </section>
 
 
@@ -230,7 +230,7 @@ included in the input container.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="vander_array.html" class="btn btn-neutral float-left" title="ivy.Array.vander" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../../losses.html" class="btn btn-neutral float-right" title="Losses" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../vector_to_skew_symmetric_matrix.html" class="btn btn-neutral float-right" title="vector_to_skew_symmetric_matrix" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>nested_multi_map &mdash; Ivy 1.0 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="icon" type="image/png" href="https://github.com/unifyai/unifyai.github.io/blob/master/img/externally_linked/ivy_logo_only.png?raw=true">
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -43,8 +44,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../background.html">Background</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../design.html">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../related_work.html">Related Work</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../extensions.html">Extensions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../roadmap.html">Roadmap</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../deep_dive.html">Deep Dive</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../faq.html">FAQ</a></li>
@@ -52,6 +53,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Functions</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../extensions.html">Extensions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../compilation.html">Compilation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../constants.html">Constants</a></li>
@@ -59,7 +61,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../data_type.html">Data type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../device.html">Device</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../elementwise.html">Elementwise</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extensions.html">Extensions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../general.html">General</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../gradients.html">Gradients</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../layers.html">Layers</a></li>
@@ -113,15 +114,15 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Docs</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../docs/ivy.html">Ivy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../docs/ivy_mech.html">Ivy mech</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../docs/ivy_vision.html">Ivy vision</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../docs/ivy_robot.html">Ivy robot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../docs/ivy_gym.html">Ivy gym</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../docs/ivy_memory.html">Ivy memory</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../docs/ivy_builder.html">Ivy builder</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../docs/ivy_models.html">Ivy models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../docs/ivy_ecosystem.html">Ivy ecosystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ivy"">Ivy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../mech"">Ivy mech</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../vision"">Ivy vision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../robot"">Ivy robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../gym"">Ivy gym</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../memory"">Ivy memory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../builder"">Ivy builder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../models"">Ivy models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../ecosystem"">Ivy ecosystem</a></li>
 </ul>
 
         </div>
@@ -138,8 +139,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../ivy.html">&lt;no title&gt;</a> &raquo;</li>
-          <li><a href="../nest.html">Nest</a> &raquo;</li>
+                    <li><a href="../nest.html">Nest</a> &raquo;</li>
       <li>nested_multi_map</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../_sources/functional/ivy/nest/nested_multi_map.rst.txt" rel="nofollow"> View page source</a>
@@ -154,7 +154,7 @@
 <h1>nested_multi_map<a class="headerlink" href="#nested-multi-map" title="Permalink to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="ivy.functional.ivy.nest.nested_multi_map">
-<span class="sig-prename descclassname"><span class="pre">ivy.functional.ivy.nest.</span></span><span class="sig-name descname"><span class="pre">nested_multi_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nests</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key_chains</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_apply</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prune_unapplied</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key_chain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_ivy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/ivy/functional/ivy/nest.html#nested_multi_map"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.functional.ivy.nest.nested_multi_map" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname">ivy.</span></span><span class="sig-name descname"><span class="pre">nested_multi_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nests</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key_chains</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_apply</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prune_unapplied</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key_chain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_ivy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/ivy/functional/ivy/nest.html#nested_multi_map"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.functional.ivy.nest.nested_multi_map" title="Permalink to this definition"></a></dt>
 <dd><p>Apply function to all array values from a collection of identically
 structured ivy arrays.</p>
 <dl class="field-list simple">
@@ -162,14 +162,14 @@ structured ivy arrays.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>func</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code>) – Function to apply to each nest entry.</p></li>
 <li><p><strong>nest</strong> – nests to map.</p></li>
-<li><p><strong>key_chains</strong> – The key-chains to apply or not apply the method to. Default is None.</p></li>
+<li><p><strong>key_chains</strong> – The key-chains to apply or not apply the method to. Default is <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
 <li><p><strong>to_apply</strong> – If True, the method will be applied to key_chains, otherwise key_chains will
-be skipped. Default is True.</p></li>
+be skipped. Default is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
 <li><p><strong>prune_unapplied</strong> – Whether to prune key_chains for which the function was not applied,
-otherwise the leftmost nest value is used. Default is False.</p></li>
+otherwise the leftmost nest value is used. Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
 <li><p><strong>key_chain</strong> – Chain of keys for this dict entry (Default value = ‘’)</p></li>
 <li><p><strong>config</strong> – The configuration for the nests. Default is the same as nest0.</p></li>
-<li><p><strong>to_ivy</strong> – convert the output to ivy_arrays. Default is True</p></li>
+<li><p><strong>to_ivy</strong> – convert the output to ivy_arrays. Default is <code class="docutils literal notranslate"><span class="pre">True</span></code></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -182,7 +182,7 @@ otherwise the leftmost nest value is used. Default is False.</p></li>
 <div class="line"><br /></div>
 <div class="line"><strong>Supported Frameworks:</strong></div>
 </div>
-<p><a class="reference external" href="https://jax.readthedocs.io"><img alt="jax_logo" src="../../../_images/jax_logo.png" /></a> <a class="reference external" href="https://www.tensorflow.org"><img alt="tf_logo" src="../../../_images/tensorflow_logo.png" /></a> <a class="reference external" href="https://pytorch.org"><img alt="pytorch_logo" src="../../../_images/pytorch_logo.png" /></a> <a class="reference external" href="https://mxnet.apache.org"><img alt="mxnet_logo" src="../../../_images/mxnet_logo.png" /></a> <a class="reference external" href="https://numpy.org"><img alt="numpy_logo" src="../../../_images/numpy_logo.png" /></a></p>
+<p class=supported_frameworks><a class="reference external logo" href="https://jax.readthedocs.io"><img alt="jax_logo" src="../../../_images/jax_logo.png" /></a> <a class="reference external logo" href="https://www.tensorflow.org"><img alt="tf_logo" src="../../../_images/tensorflow_logo.png" /></a> <a class="reference external logo" href="https://pytorch.org"><img alt="pytorch_logo" src="../../../_images/pytorch_logo.png" /></a> <a class="reference external logo" href="https://mxnet.apache.org"><img alt="mxnet_logo" src="../../../_images/mxnet_logo.png" /></a> <a class="reference external logo" href="https://numpy.org"><img alt="numpy_logo" src="../../../_images/numpy_logo.png" /></a></p>
 </section>
 
 
